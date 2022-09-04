@@ -1,8 +1,32 @@
+from pydoc_data.topics import topics
 from django.shortcuts import render, HttpResponse
+import random
+
+[
+    {'id':1, 'title':'routing', 'body':'Routing is ..'},
+    {'id':2, 'title':'view', 'body':'View is ..'},
+    {'id':3, 'title':'Model', 'body':'Model is ..'},
+]
 
 # Create your views here.
 def index(request):
-    return HttpResponse('Welcome!')
+    global topics
+    ol = ''
+    for topic in topics:
+        ol += f'<li>{topic["title"]}</li>'
+    
+    return HttpResponse(f'''
+    <html>
+    <body>
+        <h1>Django</h1>
+        <ol>
+            {ol}
+        </ol>
+        <h2>Welcome</h2>
+        Hello, Django
+    </body>
+    </html>
+    ''')
 
 def create(request):
     return HttpResponse('Create')
