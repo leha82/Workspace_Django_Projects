@@ -1,0 +1,12 @@
+DATABASES = {
+    'default': {
+        'ENGINE' : 'django.db.backends.mysql', #for mysql
+        'NAME' : 'INSERT NAME',
+        'USER' : 'INSERT MYSQL ID',
+        'PASSWORD' : 'INSERT MYSQL PASSWORD',
+        'HOST' : 'LOCALHOST',
+        'PORT' : '3306',
+    }
+}
+
+SECRET_KEY = 'INSERT SECRET_KEY'
