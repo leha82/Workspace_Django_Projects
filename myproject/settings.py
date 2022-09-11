@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import config
+import django_config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config.SECRET_KEY
+SECRET_KEY = django_config.SECRET_KEY
 # SECRET_KEY = 'django-insecure-dty$u)c1#gmb!(3fb7a-5kkf7@g45-g8s)jn*br*(!3e3unl)%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = config.DATABASES
+DATABASES = django_config.DATABASES
 
 # DATABASES = {
 #     'default': {

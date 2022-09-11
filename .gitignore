@@ -4,6 +4,7 @@
 ### Python ###
 # Project important files
 config.py
+django_config.py
 
 
 # Byte-compiled / optimized / DLL files

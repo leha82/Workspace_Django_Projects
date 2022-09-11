@@ -1,7 +1,13 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.views.decorators.csrf import csrf_exempt
+from .models import Refinement
 
 import random
+
+
+def refine_view(request):
+    refines = Refinement.objects.all()
+    return render(request, 'index.html',{"refines":refines})
 
 nextId = 4
 topics = [
